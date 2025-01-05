@@ -1,6 +1,11 @@
-# Angular19Ecommerce
+# Angular 19 E-commerce - FutureTech Store
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.6.
+This project was created for educational purposes - frontend development with Angular.
+
+It's a simple e-commerce store that allows users to add products to the cart and remove them.
+
+It was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.6.
+Uses https://fakestoreapi.com for fetching products to the store.
 
 ## Development server
 
@@ -11,6 +16,13 @@ ng serve
 ```
 
 Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+
+## Preview of the application:
+
+![home.png](images/home.png)
+![cart-full.png](images/cart-full.png)
+![cart-empty.png](images/cart-empty.png)
+
 
 ## Code scaffolding
 
@@ -36,15 +48,18 @@ ng build
 
 This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
 
-## Running unit tests
+## Running tests
 
+No tests are included for now. Be free to add your own tests.
+
+### Unit tests
 To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
 
 ```bash
 ng test
 ```
 
-## Running end-to-end tests
+### End-to-end tests
 
 For end-to-end (e2e) testing, run:
 
