@@ -23,6 +23,8 @@ import {CartService} from '../../services/cart.service';
           />
         </div>
 
+        <!--
+        IF YOU WANT TO DISPLAY STOCK INFO:
         <span class="absolute top-2 right-3 text-sm front-bold"
               [class]="product().stock ? 'text-green-500' : 'text-red-500'"
         >
@@ -32,6 +34,7 @@ import {CartService} from '../../services/cart.service';
             Out of stock
           }
         </span>
+        -->
       </div>
     </div>
   `,

@@ -5,21 +5,41 @@ import {Component, input, output} from '@angular/core';
   imports: [],
   template: `
     <button
-      class="bg-blue-500 text-white w-full border px-5 py-2 rounded-xl shadow-md hover:opacity-90"
+      class="w-full border px-5 py-3 rounded-xl shadow-lg transition-all duration-200 transform hover:scale-105 hover:shadow-2xl"
+      [class.bg-blue-950]="!disabled()"
+      [class.text-white]="!disabled()"
+      [class.text-black-300]="disabled()"
+      [disabled]="disabled()"
       (click)="handleButtonClick()"
     >
-      {{label()}}
+    {{ label() }}
     </button>
+
+
+
+
   `,
   standalone: true,
-  styles: ``
+  styles: [
+    `
+      button {
+        transition: opacity 0.2s, background-color 0.2s;
+      }
+      button:hover:not(:disabled) {
+        opacity: 0.9;
+      }
+    `
+  ]
 })
 export class PrimaryButtonComponent {
 
   // name of the button
   label = input('');
 
-  // output event when button is clicked
+  // Whether the button is disabled
+  disabled = input(false); // Default value is false (button is enabled by default)
+
+  // Output event when the button is clicked
   btnClicked = output();
 
   // handle button click

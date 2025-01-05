@@ -18,9 +18,8 @@ import {ButtonComponent} from '../../../components/button/button.component';
         <span class="text-md font-bold">{{cartItem().title}}</span>
         <span class="text-sm">{{cartItem().price + '€'}}</span>
       </div>
-      <div class="flex-1">
-        <app-button label="Remove" (btnClicked)="cartService.removeFromCart(cartItem())" />
-      </div>
+      <div class="flex-1"></div>
+        <app-button label="Remove" (btnClicked)="cartService.removeFromCart(cartItem().id)" />
     </div>
   `,
   standalone: true,

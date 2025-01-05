@@ -7,14 +7,16 @@ import {RouterLink} from '@angular/router';
   selector: 'app-header',
   imports: [PrimaryButtonComponent, RouterLink],
   template: `
-    <div class="bg-slate-100 px-4 py-3 shadow-md flex justify-between items-center">
-      <button class="text-xl"
-        [routerLink]=" '/' ">My Store</button>
+    <div class="bg-gradient-to-r from-blue-950 to-white px-4 py-3 shadow-md flex justify-between items-center">
+      <button class="text-xl font-serif text-white" [routerLink]="'/'">
+        FutureTech Store
+      </button>
       <app-primary-button
-        [label]=" 'Cart (' + cartService.cart().length + ')' "
-        [routerLink]=" '/cart' "
+        [label]="'Cart (' + cartService.cart().length + ')'"
+        [routerLink]="'/cart'"
       />
     </div>
+
   `,
   standalone: true,
   styles: ``
